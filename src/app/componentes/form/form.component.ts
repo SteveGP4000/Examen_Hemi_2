@@ -24,7 +24,5 @@ export class FormComponent implements OnInit {
   agregarRegistro(){
     this.conexionRegistro.addRegistro(this.ListaRegistro);
     console.log(this.ListaRegistro);
-  }
-
-    
+  }    
 }

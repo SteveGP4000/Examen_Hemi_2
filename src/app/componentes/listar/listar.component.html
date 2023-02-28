@@ -31,6 +31,7 @@
                         <th>Cliente</th>
                         <th>Tipo de interaccion</th>
                         <th>Descripcion</th>
+                        <th>CRUD</th>
                     </tr>
                 </thead>
                 <tbody alt="registros" *ngFor="let ListaRegistro of ListaRegistro; let i = index">
@@ -40,6 +41,15 @@
                         <td alt="cliente">{{ListaRegistro.cliente}}</td>
                         <td alt="tipo de iteraccion">{{ListaRegistro.tipo_iteracion}}</td>
                         <td alt="Descripcion">{{ListaRegistro.descripcion}}</td>
+                        <td>
+                            <div class="btn-group p-2" role="group">
+                                <button class="btn btn-primary"
+                                    data-bs-toggle="modal" data-bs-target="#modificar">
+                                    <i class="fas fa-pencil-alt"></i></button>
+                            </div>
+                            <button class="btn btn-danger"><i
+                                    class="fas fa-trash"></i></button>
+                        </td>
                     </tr>
                 </tbody>               
             </table>
