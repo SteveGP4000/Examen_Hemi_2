@@ -86,6 +86,17 @@ export class CallcenterService {
       tipo_iteracion:'0951598756',
       descripcion:'Compra'
   }]
+  getRegisto(){return this.Registro;}
+
+  getUnRegistro(codigo_registro:number):Registro[]{
+    let registros = this.getRegisto();
+    let registro = registros.filter(item => item.codigo_registro == codigo_registro )
+    return registro;
+  }
+  
+  addRegistro (Registro:Registro){
+    this.Registro.push(Registro);
+  }
   
 }
 export interface Registro {
