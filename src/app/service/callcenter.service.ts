@@ -1,10 +1,10 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable, Output } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CallcenterService {
-
+  @Output() modificar: EventEmitter<any> = new EventEmitter();
   constructor() { 
   }
   Registro:Registro []=[{
@@ -90,7 +90,7 @@ export class CallcenterService {
 
   getUnRegistro(codigo_registro:number):Registro[]{
     let registros = this.getRegisto();
-    let registro = registros.filter(item => item.codigo_registro == codigo_registro )
+    let registro = registros.filter(item => item.codigo_registro === codigo_registro )
     return registro;
   }
   
@@ -99,8 +99,17 @@ export class CallcenterService {
   }
     
   deleteRegistro(id:number){
-    if (id >= 0) {
-      this.Registro.splice(id, 1);
+    let registro = this.Registro.findIndex(item => item.codigo_registro === id )
+    if (registro >= 0) {
+      this.Registro.splice(registro, 1);
+    }else{
+      console.log("No existe mas elementos")
+    }
+  }
+  modificarObjeto = (id: number, Registro:Registro) => {
+    let registro = this.Registro.findIndex(item => item.codigo_registro === id );
+    if (registro >= 0) {
+      this.Registro.splice(registro, 1, Registro);
     }
   }
 

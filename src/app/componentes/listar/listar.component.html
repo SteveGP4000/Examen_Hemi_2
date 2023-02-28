@@ -43,11 +43,11 @@
                         <td alt="Descripcion">{{ListaRegistro.descripcion}}</td>
                         <td>
                             <div class="btn-group p-2" role="group">
-                                <button class="btn btn-primary"
+                                <button (click)="modificar(ListaRegistro.codigo_registro)" class="btn btn-primary"
                                     data-bs-toggle="modal" data-bs-target="#modificar">
                                     <i class="fas fa-pencil-alt"></i></button>
                             </div>
-                            <button class="btn btn-danger"><i
+                            <button (click)="eliminar(ListaRegistro.codigo_registro)" class="btn btn-danger"><i
                                     class="fas fa-trash"></i></button>
                         </td>
                     </tr>

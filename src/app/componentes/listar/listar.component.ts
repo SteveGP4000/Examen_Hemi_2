@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import { CallcenterService,Registro } from 'src/app/service/callcenter.service';
 import { Router } from '@angular/router';
 @Component({
@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ListarComponent implements OnInit {
 
-
+  @Input() modiicar:any;
   ListaRegistro:Registro[]=[];
   constructor(private conexionRegistro:CallcenterService,private router:Router ) 
   { }
@@ -16,4 +16,15 @@ export class ListarComponent implements OnInit {
   ngOnInit(): void {
     this.ListaRegistro = this.conexionRegistro.getRegisto();
   }
+  eliminar(id:number){
+    console.log('eliminardo: '+id)
+    this.conexionRegistro.deleteRegistro(id);
+  }
+
+  modificar(id:number){
+    this.modiicar = id;
+    console.log("ID: ",id);
+    this.conexionRegistro.modificar.emit(this.modiicar);
+    this.router.navigate(['/modificar']);
+  } 
 }
