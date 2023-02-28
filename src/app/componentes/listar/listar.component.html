@@ -1,0 +1,48 @@
+
+
+<div class="card">
+    <div class="card" alt="contenedor de carta">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h3 class="card-title">Lista Registros</h3>
+            </div>
+        </div>
+        <div class="card-header">
+            <div class="row">
+                <div class="col-6">
+                    <div class="container">
+                        <div class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="ingrese cedula para buscar"
+                             #buscarTexto aria-label="Search">
+                            <button  class="btn btn-outline-success" type="submit">Search</button>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-----Cuerpo de la tabla -->
+        <div class="card-body">
+            <table class="table table-bordered table-hover">
+                <thead alt="encabezados">
+                    <tr>
+                        <th>Codigo de registro</th>
+                        <th>Fecha</th>
+                        <th>Cliente</th>
+                        <th>Tipo de interaccion</th>
+                        <th>Descripcion</th>
+                    </tr>
+                </thead>
+                <tbody alt="registros" >
+                    <tr>
+                        <td alt="Cedula"></td>
+                        <td alt="nombre"></td>
+                        <td alt="direccion"></td>
+                        <td alt="telefono"></td>
+                        <td alt="fecha"></td>
+                    </tr>
+                </tbody>               
+            </table>
+        </div>
+    </div>
+</div>
