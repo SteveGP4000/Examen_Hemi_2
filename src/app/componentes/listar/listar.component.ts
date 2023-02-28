@@ -27,4 +27,12 @@ export class ListarComponent implements OnInit {
     this.conexionRegistro.modificar.emit(this.modiicar);
     this.router.navigate(['/modificar']);
   } 
+
+  filtrar(busca:string){
+    if(busca!=''){
+      this.ListaRegistro= this.ListaRegistro.filter(item =>item.cliente.includes(busca))
+    }else{
+      this.ListaRegistro = this.conexionRegistro.getRegisto();
+    }
+  }
 }

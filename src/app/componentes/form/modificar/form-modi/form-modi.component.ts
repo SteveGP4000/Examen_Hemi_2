@@ -28,7 +28,7 @@ constructor(private conexionRegistro:CallcenterService) {
   Carga(){
     this.conexionRegistro.modificar.subscribe(data=>{
       console.log('envia'+data);
-      this.cargar= this.conexionRegistro.getUnRegistro(data);
+      this.cargar= this.conexionRegistro.getUnRegistro(data+'');
       console.log(this.cargar);
     })
   }

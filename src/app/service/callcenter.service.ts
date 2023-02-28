@@ -10,7 +10,7 @@ export class CallcenterService {
   Registro:Registro []=[{
       codigo_registro:1,
       fecha:'2023-12-31',
-      cliente:'Cliente',
+      cliente:'Javier',
       tipo_iteracion:'0984332923',
       descripcion:'Servicio'
   },
@@ -18,7 +18,7 @@ export class CallcenterService {
    
       codigo_registro:2,
       fecha:'2022-02-15',
-      cliente:'Cliente',
+      cliente:'Ana',
       tipo_iteracion:'0978541236',
       descripcion:'Compra'
   },
@@ -26,7 +26,7 @@ export class CallcenterService {
    
       codigo_registro:3,
       fecha:'2022-04-19',
-      cliente:'Cliente',
+      cliente:'Cristhian',
       tipo_iteracion:'0987536482',
       descripcion:'Servicio'
   },
@@ -34,7 +34,7 @@ export class CallcenterService {
    
       codigo_registro:4,
       fecha:'2023-03-15',
-      cliente:'Cliente',
+      cliente:'Jose',
       tipo_iteracion:'0951234683',
       descripcion:'Compra'
   },
@@ -88,9 +88,9 @@ export class CallcenterService {
   }]
   getRegisto(){return this.Registro;}
 
-  getUnRegistro(codigo_registro:number):Registro[]{
+  getUnRegistro(codigo_registro:string):Registro[]{
     let registros = this.getRegisto();
-    let registro = registros.filter(item => item.codigo_registro === codigo_registro )
+    let registro = registros.filter(item => item.codigo_registro === parseInt(codigo_registro) ||  item.cliente === codigo_registro )
     return registro;
   }
   

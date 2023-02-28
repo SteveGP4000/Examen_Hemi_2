@@ -13,7 +13,9 @@
                     <div class="container">
                         <div class="d-flex" role="search">
                             <input class="form-control me-2" type="search" placeholder="ingrese cedula para buscar"
-                             #buscarTexto aria-label="Search">
+                              aria-label="Search"
+                                #txtSearch
+                                (keyup)="filtrar(txtSearch.value)">
                             <button  class="btn btn-outline-success" type="submit">Search</button>
                           </div>
                     </div>
