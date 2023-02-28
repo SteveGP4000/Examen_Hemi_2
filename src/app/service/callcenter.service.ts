@@ -97,7 +97,13 @@ export class CallcenterService {
   addRegistro (Registro:Registro){
     this.Registro.push(Registro);
   }
-  
+    
+  deleteRegistro(id:number){
+    if (id >= 0) {
+      this.Registro.splice(id, 1);
+    }
+  }
+
 }
 export interface Registro {
   codigo_registro:number,

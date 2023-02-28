@@ -33,13 +33,13 @@
                         <th>Descripcion</th>
                     </tr>
                 </thead>
-                <tbody alt="registros" >
+                <tbody alt="registros" *ngFor="let ListaRegistro of ListaRegistro; let i = index">
                     <tr>
-                        <td alt="Cedula"></td>
-                        <td alt="nombre"></td>
-                        <td alt="direccion"></td>
-                        <td alt="telefono"></td>
-                        <td alt="fecha"></td>
+                        <td alt="Cedula">{{ListaRegistro.codigo_registro}}</td>
+                        <td alt="fecha">{{ListaRegistro.fecha}}</td>
+                        <td alt="cliente">{{ListaRegistro.cliente}}</td>
+                        <td alt="tipo de iteraccion">{{ListaRegistro.tipo_iteracion}}</td>
+                        <td alt="Descripcion">{{ListaRegistro.descripcion}}</td>
                     </tr>
                 </tbody>               
             </table>
