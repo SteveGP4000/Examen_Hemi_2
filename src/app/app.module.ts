@@ -7,20 +7,19 @@ import { NavbarComponent } from './componentes/shared/navbar/navbar.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { FormComponent } from './componentes/form/form.component';
 import { ListarComponent } from './componentes/listar/listar.component';
-import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './componentes/login/login.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
-    FormComponent,
-    ListarComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
