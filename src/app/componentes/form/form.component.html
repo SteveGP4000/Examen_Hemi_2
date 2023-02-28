@@ -1,0 +1,41 @@
+<div class="card">
+    <div class="card-body">
+        <form class="p-5">
+            <h3 class="text-center">Formulario de Registros</h3>
+            <div class="form-group">
+                <label>Codigo de Registro</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el codigo"
+                    name="codigo">
+            </div>
+
+            <div class="form-group">
+                <label>Fecha</label>
+                <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Ingrese la fecha"
+                    name="Fecha">
+            </div>
+
+            <div class="form-group">
+                <label>Cliente</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese el cliente"
+                    name="Cliente">
+            </div>
+
+            <div class="form-group">
+                <label>Tipo de interaccion</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Interaccion"
+                    name="Interaccion">
+            </div>
+
+            <div class="form-group">
+                <label>Descripcion</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese Descripcion"
+                    name="Descripcion">
+            </div>
+
+            <div class="container p-4 text-center">
+                <button type="submit" class="btn btn-success" [routerLink]="['mostrar']">Guardar</button>
+                <button type="submit" class="btn btn-danger" [routerLink]="['mostrar']">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>
